@@ -1,0 +1,13 @@
+.section {
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  border-radius: 0 0 40px 40px;
+}
+
+.video {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}

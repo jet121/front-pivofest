@@ -1,0 +1,199 @@
+.section {
+  padding: 0 24px;
+  padding-bottom: 100px;
+
+  .title {
+    color: var(--color-red);
+    font-family: var(--font-paragon);
+    font-size: 44px;
+    line-height: 110%;
+    margin-bottom: 24px;
+    text-transform: uppercase;
+  }
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Строка-поле (Тип, Email) — label слева, значение справа, подчёркивание */
+.row {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 18px 0;
+  border-bottom: 1px solid #ded6cd;
+  background: transparent;
+  text-align: left;
+  cursor: pointer;
+  font-family: var(--font-sans);
+}
+
+.label {
+  font-family: var(--font-sans);
+  font-size: 16px;
+  line-height: 120%;
+  color: #7e7671;
+  white-space: nowrap;
+}
+
+.value {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 16px;
+  line-height: 120%;
+  color: var(--color-dark);
+}
+
+.input {
+  flex: 1;
+  min-width: 0;
+  border: none;
+  background: transparent;
+  font-family: var(--font-sans);
+  font-size: 16px;
+  line-height: 120%;
+  color: var(--color-dark);
+  text-align: right;
+}
+
+.input::placeholder {
+  color: var(--color-dark);
+}
+
+/* Кастомный шеврон ">" */
+.chevron {
+  width: 8px;
+  height: 8px;
+  border-right: 2px solid var(--color-dark);
+  border-bottom: 2px solid var(--color-dark);
+  transform: rotate(-45deg);
+  transition: transform 0.2s ease;
+}
+
+.chevronOpen {
+  transform: rotate(45deg);
+}
+
+/* Дропдаун типа */
+.select {
+  position: relative;
+}
+
+.options {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  z-index: 5;
+  min-width: 200px;
+  margin: 4px 0 0;
+  padding: 4px;
+  list-style: none;
+  background: var(--color-white);
+  box-shadow: 0 12px 32px rgba(47, 42, 38, 0.15);
+}
+
+.option {
+  width: 100%;
+  padding: 12px 16px;
+  background: transparent;
+  border: none;
+  text-align: left;
+  font-family: var(--font-sans);
+  font-size: 16px;
+  color: var(--color-dark);
+  cursor: pointer;
+  transition: background-color 0.15s ease;
+}
+
+.option:hover {
+  background: var(--color-surface);
+}
+
+.optionActive {
+  color: var(--color-orange);
+}
+
+/* Блок сообщения */
+.messageBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 18px 0 8px;
+}
+
+.textarea {
+  width: 100%;
+  min-height: 60px;
+  border: none;
+  background: transparent;
+  resize: vertical;
+  font-family: var(--font-sans);
+  font-size: 16px;
+  line-height: 130%;
+  color: var(--color-dark);
+}
+
+.textarea::placeholder {
+  color: var(--color-dark);
+}
+
+.error,
+.success {
+  margin-top: 16px;
+  font-family: var(--font-sans);
+  font-size: 14px;
+  line-height: 130%;
+}
+
+.error {
+  color: var(--color-red);
+}
+
+.success {
+  color: var(--color-green);
+}
+
+/* Кнопки */
+.actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.attach {
+  flex: 1;
+  min-width: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 56px;
+  padding: 8px 16px;
+  background: var(--color-surface);
+  cursor: pointer;
+}
+
+.attachText {
+  font-family: var(--font-sans);
+  font-size: 15px;
+  line-height: 120%;
+  color: var(--color-dark);
+  text-align: center;
+  max-width: 100%;
+}
+
+.fileInput {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.submit {
+  flex: 0 0 auto;
+}

@@ -1,0 +1,50 @@
+/*
+ * Подключение шрифтов проекта.
+ * Файлы шрифтов положить в public/fonts/ (см. public/fonts/README.md).
+ * Пути начинаются с /fonts/... — это глобальные ассеты из public,
+ * поэтому сборка не падает, даже если файл ещё не добавлен.
+ * Если у начертания несколько весов — добавьте отдельные @font-face с нужным font-weight.
+ */
+
+/* Tilda Sans */
+@font-face {
+  font-family: 'Tilda Sans';
+  src: url('/fonts/TildaSans-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Tilda Sans';
+  src: url('/fonts/TildaSans-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Tilda Sans';
+  src: url('/fonts/TildaSans-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Tilda Script */
+@font-face {
+  font-family: 'Tilda Script';
+  src: url('/fonts/TildaScript-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Parangon */
+@font-face {
+  font-family: 'Parangon';
+  src: url('/fonts/Parangon-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}

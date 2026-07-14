@@ -1,0 +1,21 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 24px;
+  margin-bottom: 16px;
+
+  .back {
+    background: var(--color-green);
+    width: 40px;
+    height: 40px;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+
+  .logo {
+    max-width: 188px;
+    max-height: 120px;
+  }
+}

@@ -1,0 +1,209 @@
+.hero {
+  position: relative;
+  border-bottom-right-radius: 200px;
+  border-bottom-left-radius: 200px;
+  overflow: hidden;
+
+  .bg {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    width: 412;
+
+    &:after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.4);
+    }
+
+    img {
+      object-fit: cover;
+      height: 100%;
+      width: 100%;
+    }
+  }
+
+  .content {
+    position: relative;
+    z-index: 2;
+    color: var(--color-white);
+    padding: 24px;
+    padding-bottom: 100px;
+
+    .buy {
+      margin-bottom: 16px;
+    }
+
+    .buy,
+    .win {
+      display: flex;
+      flex-direction: column;
+
+      & > span {
+        text-align: right;
+        font-family: var(--font-sans);
+        font-size: 19px;
+        line-height: 120%;
+        display: flex;
+        max-width: 70%;
+        align-self: flex-end;
+        margin-top: 10px;
+      }
+    }
+
+    .win {
+      margin-bottom: 20px;
+    }
+
+    .subtitle {
+      font-family: var(--font-paragon);
+      font-size: 44px;
+      line-height: 110%;
+      position: relative;
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      text-transform: uppercase;
+
+      .beer {
+        transform: translateY(24px);
+      }
+
+      .vector {
+        svg {
+          position: absolute;
+          width: 100%;
+          left: 0;
+          bottom: 0;
+          z-index: -1;
+          transform: translateY(65%);
+        }
+      }
+
+      span {
+        position: relative;
+      }
+    }
+
+    .logo {
+      width: 100%;
+      margin-bottom: 50px;
+
+      svg {
+        width: 100%;
+        height: 100%;
+        max-height: 234px;
+      }
+    }
+
+    .rewards {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 36px;
+      margin-bottom: 50px;
+
+      .reward {
+        position: relative;
+        padding-bottom: 60px;
+
+        &:first-child {
+          z-index: 2;
+        }
+
+        .info {
+          font-family: var(--font-paragon);
+          font-family: Parangon;
+          font-size: 74px;
+          line-height: 130%;
+          letter-spacing: -10%;
+          position: relative;
+          width: 150px;
+
+          .green,
+          .red {
+            position: absolute;
+            top: -60%;
+            left: -30%;
+            z-index: -1;
+
+            svg {
+              width: 100%;
+              height: 100%;
+            }
+          }
+
+          .red {
+            width: 228px;
+            height: 238px;
+          }
+
+          .green {
+            width: 228px;
+            height: 283px;
+            left: -40%;
+            top: -35%;
+          }
+
+          b {
+            font-size: 40px;
+          }
+
+          span {
+            font-family: var(--font-script);
+            font-family: Tilda Script;
+            font-size: 32px;
+            line-height: 90%;
+            letter-spacing: 0;
+            position: absolute;
+            transform: rotate(-10deg);
+            bottom: 0;
+            right: 0;
+          }
+        }
+
+        .hint {
+          position: absolute;
+          font-family: var(--font-sans);
+          font-family: Tilda Sans;
+          font-size: 16px;
+          line-height: 110%;
+          right: 0;
+          bottom: 0;
+          text-align: right;
+
+          &.red {
+            right: 40px;
+          }
+        }
+      }
+    }
+
+    .button {
+      width: 100%;
+      margin-bottom: 40px;
+    }
+
+    .text {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+
+      p {
+        font-family: var(--font-sans);
+        font-size: 19px;
+        line-height: 120%;
+        text-align: center;
+      }
+
+      .button {
+        max-width: 244px;
+        margin: 0 auto;
+      }
+    }
+  }
+}

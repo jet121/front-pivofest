@@ -1,0 +1,170 @@
+.section {
+  padding: 24px;
+  color: #000;
+  font-family: var(--font-sans);
+  font-size: 14px;
+  line-height: 120%;
+
+  h2 {
+    color: var(--color-red);
+    font-family: var(--font-paragon);
+    font-size: 31px;
+    line-height: 110%;
+    text-transform: uppercase;
+    margin-bottom: 24px;
+    text-align: center;
+  }
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 24px;
+  }
+
+  p {
+    margin-bottom: 24px;
+    text-align: center;
+  }
+
+  .image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 32px;
+
+    img {
+      max-width: 248px;
+    }
+  }
+
+  .button {
+    width: 100%;
+    margin-bottom: 32px;
+  }
+
+  .photo {
+    width: 100%;
+    color: var(--color-orange);
+    text-align: center;
+    text-decoration-line: underline;
+    text-decoration-style: dotted;
+    text-decoration-color: var(--color-orange);
+    text-underline-offset: 0.15em;
+  }
+}
+
+.error {
+  color: var(--color-red);
+  font-family: var(--font-sans);
+  font-size: 14px;
+  line-height: 130%;
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.link {
+  background: transparent;
+  color: var(--color-orange);
+  font-family: inherit;
+  font-size: inherit;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+/* Экран сканера / камеры */
+.scanner,
+.camera {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 72px 24px 32px;
+  background: var(--color-dark);
+  color: var(--color-white);
+
+  video {
+    height: 100%;
+  }
+}
+
+.back {
+  position: absolute;
+  top: 16px;
+  left: 24px;
+  width: 40px;
+  height: 40px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-green);
+  cursor: pointer;
+}
+
+.backArrow {
+  width: 12px;
+  height: 12px;
+  border-left: 2px solid var(--color-white);
+  border-bottom: 2px solid var(--color-white);
+  transform: rotate(45deg);
+  margin-left: 4px;
+}
+
+.scannerTitle {
+  font-family: var(--font-paragon);
+  font-size: 24px;
+  line-height: 110%;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.scannerRegion {
+  width: 100%;
+  max-width: 320px;
+  aspect-ratio: 1;
+  overflow: hidden;
+  margin-bottom: 24px;
+  background: #000;
+}
+
+.manual {
+  margin-top: auto;
+  color: var(--color-white);
+  text-align: center;
+  text-decoration: underline dotted var(--color-orange);
+  text-underline-offset: 0.15em;
+}
+
+.video {
+  width: 100%;
+  flex: 1;
+  object-fit: cover;
+  margin-bottom: 24px;
+  background: #000;
+}
+
+.cameraError {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+
+.cameraButton {
+  width: 100%;
+}
+
+.sending {
+  position: fixed;
+  inset: 0;
+  z-index: 1100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(47, 42, 38, 0.7);
+  color: var(--color-white);
+  font-family: var(--font-paragon);
+  font-size: 24px;
+}

@@ -1,0 +1,15 @@
+:root {
+  /* Цвета */
+  --color-white: #ffffff;
+  --color-orange: #ec691f;
+  --color-green: #149a76;
+  --color-red: #db1c41;
+  --color-background: #fff9f1;
+  --color-surface: #f9efe2;
+  --color-dark: #2f2a26;
+
+  /* Шрифты */
+  --font-sans: 'Tilda Sans', system-ui, -apple-system, sans-serif;
+  --font-script: 'Tilda Script', cursive;
+  --font-paragon: 'Parangon', serif;
+}

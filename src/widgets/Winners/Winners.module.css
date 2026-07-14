@@ -1,0 +1,99 @@
+.section {
+  padding: 0 24px;
+  padding-bottom: 100px;
+
+  .title {
+    color: var(--color-red);
+    font-family: var(--font-paragon);
+    font-size: 44px;
+    line-height: 110%;
+    margin-bottom: 32px;
+    text-transform: uppercase;
+  }
+}
+
+.draws {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+
+.head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.drawTitle {
+  position: relative;
+  display: inline-block;
+  color: var(--color-green);
+  font-family: var(--font-script);
+  font-weight: 400;
+}
+
+.word {
+  font-size: 40px;
+  line-height: 100%;
+  color: #000;
+  transform: rotate(-10deg);
+  display: block;
+}
+
+/* Дата смещена к нижнему-правому краю слова, как на макете */
+.date {
+  position: absolute;
+  left: 110px;
+  bottom: -10px;
+  font-size: 40px;
+  line-height: 100%;
+  white-space: nowrap;
+  transform: rotate(-10deg);
+  display: block;
+  letter-spacing: -10%;
+}
+
+.icon {
+  flex-shrink: 0;
+
+  svg {
+    display: block;
+    width: 56px;
+    height: 56px;
+
+    path {
+      fill: var(--accent);
+    }
+  }
+}
+
+.couponsLabel {
+  font-family: var(--font-sans);
+  font-size: 14px;
+  line-height: 120%;
+  color: #7e7671;
+  margin-bottom: 12px;
+}
+
+.coupons {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+}
+
+.coupon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 8px;
+  background: var(--color-surface);
+  font-family: var(--font-paragon);
+  font-size: 18px;
+  line-height: 100%;
+  color: var(--color-green);
+}

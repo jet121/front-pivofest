@@ -1,0 +1,74 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+.image {
+  position: absolute;
+  z-index: 1;
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.35);
+  }
+}
+
+.card {
+  width: 100%;
+  max-width: 420px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+  height: 100%;
+}
+
+.title {
+  font-family: var(--font-paragon);
+  font-size: 44px;
+  font-weight: 700;
+  color: var(--color-white);
+
+  span {
+    position: relative;
+    display: block;
+    width: fit-content;
+    margin: 0 auto;
+
+    svg {
+      position: absolute;
+      top: -15px;
+      left: -50px;
+      z-index: -1;
+    }
+  }
+}
+
+.text {
+  margin-bottom: 28px;
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--color-white);
+  font-family: var(--font-paragon);
+}
+
+.actions {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  width: 100%;
+}
+
+.actions > * {
+  width: 100%;
+}

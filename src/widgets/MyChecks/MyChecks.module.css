@@ -1,0 +1,48 @@
+.section {
+  padding: 0 24px;
+  padding-bottom: 100px;
+
+  .title {
+    color: var(--color-red);
+    font-family: var(--font-paragon);
+    font-size: 44px;
+    line-height: 110%;
+    margin-bottom: 16px;
+    text-transform: uppercase;
+  }
+
+  .list {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 32px;
+  }
+
+  .hint {
+    font-family: var(--font-sans);
+    font-size: 16px;
+    line-height: 140%;
+    color: var(--color-dark);
+    margin-bottom: 32px;
+  }
+
+  .link {
+    background: transparent;
+    color: var(--color-orange);
+    font-family: inherit;
+    font-size: inherit;
+    text-decoration: underline;
+    cursor: pointer;
+  }
+
+  .actions {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    margin-bottom: 38px;
+
+    button,
+    a {
+      width: 100%;
+    }
+  }
+}

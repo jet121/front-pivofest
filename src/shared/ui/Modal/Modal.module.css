@@ -1,0 +1,45 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: flex;
+  padding: 16px;
+  background-color: rgba(47, 42, 38, 0.6);
+  overflow-y: auto;
+}
+
+.content {
+  /* margin: auto центрирует по обеим осям, когда модалка помещается,
+     и не обрезает её (в отличие от align/justify center), когда она выше
+     экрана — тогда доступна прокрутка до самого верха и низа. */
+  margin: auto;
+  position: relative;
+  width: 100%;
+  max-width: 520px;
+  padding: 48px 24px 32px;
+  background-color: var(--color-white);
+}
+
+.close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  color: var(--color-dark);
+  transition: opacity 0.15s ease;
+  background: var(--color-green);
+
+  svg {
+    width: 20px;
+    height: 20px;
+    color: var(--color-white) !important;
+  }
+}
+
+.close:hover {
+  opacity: 0.6;
+}
