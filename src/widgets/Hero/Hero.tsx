@@ -49,7 +49,7 @@ export const Hero = () => {
             </div>
           </h5>
 
-          <span>продукцию пивоваренного завода «КРАФТ»</span>
+          <span>билеты на фестиваль</span>
         </div>
 
         <div className={styles.logo}>
