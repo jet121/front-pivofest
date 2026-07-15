@@ -2,7 +2,7 @@ import React from "react";
 import styles from "./Check.module.css";
 import PendingIcon from "./_i/pending.svg?react";
 import SuccessIcon from "./_i/done.svg?react";
-import ErrorIcon from "./_i/Attention.svg?react";
+import ErrorIcon from "./_i/attention.svg?react";
 
 export interface ICheck {
   status: "pending" | "success" | "error";
