@@ -31,7 +31,7 @@ export const getTransactions = async (
       ...defaultOptions(),
       auth_key: params.auth_key,
       user_id: params.user_id,
-      page: params.page ?? 1,
+      page: params.page ?? 0,
     }),
   );
   return data;
