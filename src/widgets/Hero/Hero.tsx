@@ -1,4 +1,3 @@
-import React from "react";
 import styles from "./Hero.module.css";
 import BeerIcon from "@shared/assets/icons/beer.svg?react";
 import VectorGreenIcon from "./_i/vector-green.svg?react";
