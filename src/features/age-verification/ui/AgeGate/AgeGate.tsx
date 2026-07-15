@@ -11,7 +11,7 @@ export const AgeGate = () => {
   return (
     <div className={styles.overlay} role="dialog" aria-modal="true">
       <div className={styles.image}>
-        <img src="/images/age.png" alt="Age Gate" />
+        <img src="/images/age.webp" alt="Age Gate" />
       </div>
 
       <div className={styles.card}>

@@ -1,7 +1,9 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { ROUTES } from "@shared/config/routes";
 import styles from "./ScannerPreview.module.css";
-import CheckPhoto from "./_i/check_photo.png";
-import CheckScan from "./_i/check_scan.png";
+import CheckPhoto from "./_i/check_photo.webp";
+import CheckScan from "./_i/check_scan.webp";
 import { Button } from "@shared/ui";
 import { getApiErrorMessage } from "@shared/api";
 import { useAppDispatch, useAppSelector } from "@app/providers/store";
@@ -17,6 +19,7 @@ export const ScannerPreview = () => {
   const auth = useAppSelector(selectAuth);
   const dispatch = useAppDispatch();
 
+  const navigate = useNavigate();
   const [step, setStep] = useState<Step>("scan");
   const [qrdata, setQrdata] = useState<string | null>(null);
   const [submitting, setSubmitting] = useState(false);
@@ -110,6 +113,13 @@ export const ScannerPreview = () => {
       <section className={styles.section}>
         <h2>ЧЕК ОТПРАВЛЕН</h2>
         <p>Спасибо! Чек принят и отправлен на проверку.</p>
+        <Button
+          className={styles.button}
+          variant="primary"
+          onClick={() => navigate(ROUTES.HOME)}
+        >
+          На главную
+        </Button>
       </section>
     );
   }

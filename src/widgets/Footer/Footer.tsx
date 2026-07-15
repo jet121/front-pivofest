@@ -32,7 +32,7 @@ export const Footer: React.FC<Props> = ({ orange }) => {
       )}
       <section className={`${styles.section}`}>
         <div className={styles.bg}>
-          <img src="/images/footer.png" alt="Footer background" />
+          <img src="/images/footer.webp" alt="Footer background" />
         </div>
 
         <div className={styles.content}>

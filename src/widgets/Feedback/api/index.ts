@@ -1,10 +1,4 @@
-import {
-  api,
-  API_ROUTES,
-  API_KEY,
-  defaultOptions,
-  toForm,
-} from "@shared/api";
+import { api, API_ROUTES, API_KEY, defaultOptions, toForm } from "@shared/api";
 
 export interface RequestType {
   id: number;
@@ -41,7 +35,7 @@ export const sendRequest = async (params: SendRequestParams) => {
     form.append("type_id", String(fields.type_id));
     if (fields.auth_key) form.append("auth_key", fields.auth_key);
     if (fields.user_id != null) form.append("user_id", String(fields.user_id));
-    form.append("file", file);
+    form.append("image", file);
 
     const { data } = await api.post(API_ROUTES.CONTACT, form, {
       headers: { "Content-Type": "multipart/form-data" },

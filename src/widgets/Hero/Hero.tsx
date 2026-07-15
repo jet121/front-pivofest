@@ -23,7 +23,7 @@ export const Hero = () => {
   return (
     <section className={styles.hero}>
       <div className={styles.bg}>
-        <img src="/images/hero.png" alt="Hero Background" />
+        <img src="/images/hero.webp" alt="Hero Background" />
       </div>
 
       <div className={styles.content}>

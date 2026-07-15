@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import styles from "./UserSection.module.css";
-import Image from "./_i/image.png";
+import Image from "./_i/image.webp";
 import BrunkaIcon from "@shared/assets/icons/brunka.svg?react";
 import { Button } from "@shared/ui";
 import { ROUTES } from "@shared/config/routes";
