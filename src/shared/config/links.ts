@@ -4,11 +4,12 @@
  */
 export const EXTERNAL_LINKS = {
   /** Покупка билета на фестиваль */
-  TICKET: "",
+  TICKET:
+    "https://orenburg.kassir.ru/festivali/polyana-kraft/kraft-bazar-festival-gastronomii-i-muzyiki_2026-09-05",
   /** Продукция завода, участвующая в акции */
-  PRODUCTS: "",
+  PRODUCTS: "https://orenbeer.ru/store/pivo",
   /** Подробнее о фестивале */
-  FESTIVAL: "",
+  FESTIVAL: "https://craft-bazar.ru/",
 };
 
 /** Открывает ссылку в новой вкладке, если она задана. */

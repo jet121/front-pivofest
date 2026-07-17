@@ -6,7 +6,13 @@ import BrunkaIcon from "@shared/assets/icons/brunka.svg?react";
 import { Button } from "@shared/ui";
 import { ROUTES } from "@shared/config/routes";
 import { useAppDispatch, useAppSelector } from "@app/providers/store";
-import { selectAuth, selectUser, getAccount, type Account } from "@entities/user";
+import {
+  selectAuth,
+  selectUser,
+  getAccount,
+  clearUser,
+  type Account,
+} from "@entities/user";
 import { selectRulesLink } from "@entities/service-data";
 import { openRegistration } from "@features/registration";
 
@@ -116,6 +122,12 @@ export const UserSection = () => {
                   onClick={() => navigate(ROUTES.WINNERS)}
                 >
                   Победители розыгрышей
+                </Button>
+                <Button
+                  variant="outline"
+                  onClick={() => dispatch(clearUser())}
+                >
+                  Выйти
                 </Button>
               </div>
             </div>

@@ -1,4 +1,9 @@
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import {
+  createBrowserRouter,
+  RouterProvider,
+  Outlet,
+  ScrollRestoration,
+} from 'react-router-dom';
 import { ROUTES } from '@shared/config/routes';
 import { HomePage } from '@pages/home';
 import { RegistrationPage } from '@pages/registration';
@@ -9,15 +14,28 @@ import { MyReceiptsPage } from '@pages/my-receipts';
 import { FeedbackPage } from '@pages/feedback';
 import { WinnersPage } from '@pages/winners';
 
+// Корневой layout: сбрасывает скролл наверх при каждом переходе.
+const RootLayout = () => (
+  <>
+    <ScrollRestoration />
+    <Outlet />
+  </>
+);
+
 const router = createBrowserRouter([
-  { path: ROUTES.HOME, element: <HomePage /> },
-  { path: ROUTES.REGISTRATION, element: <RegistrationPage /> },
-  { path: ROUTES.RECEIPT_SCAN_PREVIEW, element: <ReceiptScanPreviewPage /> },
-  { path: ROUTES.RECEIPT_SCANNER, element: <ReceiptScannerPage /> },
-  { path: ROUTES.PROMO_CODES, element: <PromoCodesPage /> },
-  { path: ROUTES.MY_RECEIPTS, element: <MyReceiptsPage /> },
-  { path: ROUTES.FEEDBACK, element: <FeedbackPage /> },
-  { path: ROUTES.WINNERS, element: <WinnersPage /> },
+  {
+    element: <RootLayout />,
+    children: [
+      { path: ROUTES.HOME, element: <HomePage /> },
+      { path: ROUTES.REGISTRATION, element: <RegistrationPage /> },
+      { path: ROUTES.RECEIPT_SCAN_PREVIEW, element: <ReceiptScanPreviewPage /> },
+      { path: ROUTES.RECEIPT_SCANNER, element: <ReceiptScannerPage /> },
+      { path: ROUTES.PROMO_CODES, element: <PromoCodesPage /> },
+      { path: ROUTES.MY_RECEIPTS, element: <MyReceiptsPage /> },
+      { path: ROUTES.FEEDBACK, element: <FeedbackPage /> },
+      { path: ROUTES.WINNERS, element: <WinnersPage /> },
+    ],
+  },
 ]);
 
 export const AppRouter = () => <RouterProvider router={router} />;

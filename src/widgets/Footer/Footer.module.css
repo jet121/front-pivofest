@@ -93,6 +93,12 @@
       display: flex;
       flex-direction: column;
       gap: 16px;
+
+      .policy {
+        color: var(--color-orange);
+        text-decoration: underline;
+        text-underline-offset: 2px;
+      }
     }
   }
 }

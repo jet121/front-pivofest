@@ -1,10 +1,17 @@
-import { useId, useState } from "react";
+import { useId, useState, type ReactNode } from "react";
 import styles from "./FAQ.module.css";
 import VectorIcon from "./_i/vector.svg?react";
 import BubblesIcon from "./_i/bubbles.svg?react";
 import PatternIcon from "@widgets/UserSection/_i/pattern.svg?react";
+import { EXTERNAL_LINKS } from "@shared/config/links";
 
-const faqItems = [
+const ProductsLink = () => (
+  <a href={EXTERNAL_LINKS.PRODUCTS} target="_blank" rel="noopener noreferrer">
+    {EXTERNAL_LINKS.PRODUCTS.replace(/^https?:\/\//, "")}
+  </a>
+);
+
+const faqItems: { question: string; answer: ReactNode }[] = [
   {
     question: "Какие возрастные ограничения?",
     answer:
@@ -12,8 +19,12 @@ const faqItems = [
   },
   {
     question: "Какие магазины участвуют в акции?",
-    answer:
-      "Актуальный список магазинов-участников размещён на сайте. Покупки должны быть совершены в точках, участвующих в акции.",
+    answer: (
+      <>
+        Любые магазины, в которых продают продукцию пивоваренного завода
+        «Крафт». Список продукции, участвующей в акции: <ProductsLink />.
+      </>
+    ),
   },
   {
     question:
@@ -24,8 +35,13 @@ const faqItems = [
   {
     question:
       "Какое пиво или лимонад мне купить, чтобы выиграть билет на фестиваль?",
-    answer:
-      "Участвует любая продукция пивоваренного завода Крафт из списка на сайте. Конкретный сорт не влияет на участие в розыгрыше.",
+    answer: (
+      <>
+        Участвует любая продукция пивоваренного завода «Крафт» из списка{" "}
+        <ProductsLink />. Конкретный сорт не влияет на участие в розыгрыше. Но
+        принимаются чеки от 700 руб.
+      </>
+    ),
   },
   {
     question: "Как мне узнать выиграл ли я билет?",
@@ -51,7 +67,7 @@ const faqItems = [
 
 interface FaqItemProps {
   question: string;
-  answer: string;
+  answer: ReactNode;
   isOpen: boolean;
   onToggle: () => void;
 }

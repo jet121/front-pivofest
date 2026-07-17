@@ -46,8 +46,8 @@ export const HowToWin = () => {
             </div>
 
             <div className={styles.point}>
-              <b>Получай промокод</b> на скидку 20% на билетв «КРАФТ БАЗАР»{" "}
-              <Link to={ROUTES.MY_RECEIPTS}>в личном кабинете</Link>
+              <b>Получай промокод</b> на скидку 20% на билет в «КРАФТ БАЗАР»{" "}
+              <Link to={ROUTES.PROMO_CODES}>в личном кабинете</Link>
             </div>
 
             <div className={styles.point}>

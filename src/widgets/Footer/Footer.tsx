@@ -6,7 +6,7 @@ import EightTeenIcon from "./_i/18.svg?react";
 import OrangeBg from "@widgets/FAQ/_i/vector.svg?react";
 import PatternBg from "@widgets/UserSection/_i/pattern.svg?react";
 import { useAppSelector } from "@app/providers/store";
-import { selectRulesLink } from "@entities/service-data";
+import { selectRulesLink, selectPdLink } from "@entities/service-data";
 
 interface Props {
   orange?: boolean;
@@ -14,6 +14,7 @@ interface Props {
 
 export const Footer: React.FC<Props> = ({ orange }) => {
   const rulesLink = useAppSelector(selectRulesLink);
+  const pdLink = useAppSelector(selectPdLink);
 
   return (
     <>
@@ -59,6 +60,14 @@ export const Footer: React.FC<Props> = ({ orange }) => {
 
           <div className={styles.copy}>
             © 2026 Оренбургский пивоваренный завод «Крафт»
+            <a
+              href={pdLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={styles.policy}
+            >
+              Политика обработки персональных данных
+            </a>
           </div>
         </div>
       </section>
