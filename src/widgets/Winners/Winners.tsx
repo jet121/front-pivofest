@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import type { CSSProperties, FC, SVGProps } from "react";
 import styles from "./Winners.module.css";
 import winnersData from "./winners.json";
@@ -5,6 +6,8 @@ import BeerIcon from "@shared/assets/icons/beer.svg?react";
 import HopsIcon from "@shared/assets/icons/brunka.svg?react";
 import GrillIcon from "@shared/assets/icons/grill.svg?react";
 import TentIcon from "@shared/assets/icons/shater.svg?react";
+
+const WINNERS_URL = "https://jetcrm.ru/craft/winners.json";
 
 interface Draw {
   date: string;
@@ -32,9 +35,33 @@ const resolveIcon = (icon: string | undefined, index: number) => {
   return ICONS[ICON_ROTATION[index % ICON_ROTATION.length]];
 };
 
-const draws = winnersData as Draw[];
+const fallbackDraws = winnersData as Draw[];
 
 export const Winners = () => {
+  const [draws, setDraws] = useState<Draw[]>(fallbackDraws);
+
+  useEffect(() => {
+    let cancelled = false;
+
+    fetch(WINNERS_URL, { cache: "no-store" })
+      .then((res) => {
+        if (!res.ok) throw new Error(`HTTP ${res.status}`);
+        return res.json();
+      })
+      .then((data: unknown) => {
+        if (!cancelled && Array.isArray(data)) {
+          setDraws(data as Draw[]);
+        }
+      })
+      .catch(() => {
+        // Оставляем bundled fallback, если удалённый JSON недоступен.
+      });
+
+    return () => {
+      cancelled = true;
+    };
+  }, []);
+
   return (
     <section className={styles.section}>
       <h2 className={styles.title}>Победители</h2>
